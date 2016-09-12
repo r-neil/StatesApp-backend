@@ -1,3 +1,22 @@
+#!/usr/bin/env python
+'''
+__author__ = "Neil R"
+__copyright__ = "Copyright 2016"
+
+__license__ = "GPL"
+__version__ = "1.0"
+__maintainer__ = "Neil R"
+__website__ = "www.neil-r.com"
+__status__ = "Production"
+
+View will provide a General overview page on the base URL.
+View will response with a JSON View if baseurl.com/state%20name
+or baseurl.com/state_abbrev is used.
+
+'''
+
+from django.shortcuts import render
+from django.http import	HttpResponse
 from rest_framework.exceptions import APIException
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -7,7 +26,11 @@ from datetime import date
 from . import models
 from . import serializers
 
-
+def home_view(request):
+	'''
+	Shows simple home page when user goes to base URL.
+	'''
+	return render(request, 'states/home.html')
 
 class ShowStateDetails(APIView):
 	def empty_view(self):
