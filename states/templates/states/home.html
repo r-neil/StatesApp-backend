@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>State Data API</title>
+	<link href='static/states/main.css' rel="stylesheet">
+</head>
+
+<body>
+<section id='body'>
+	<h1>Welcome to State API</h1>
+	<p>
+	This API provides basic infromation for all 50 United States in JSON format. Information includes <u>State Capital</u>, <u>Population</u>, <u>Population Rank</u>, <u>Year State Joined the Union</u> and <u>State Nicknames</u>.
+	</p>
+	<p>
+	Data source: Wikipedia, September 2016.
+	</p>
+
+
+	<h2>By State Name</h2>
+	<b>Description:</b> You can call with the full state name. Use '%20' for spaces. API will respond with relevant state information.<br>
+	<b>Examples:</b><br>
+	http://baseURL.com/Washington<br>
+	http://baseURL.com/North%20Carolina
+
+	<h2>By State Abbreviation</h2>
+	<b>Description:</b> You can call using the State's abbreviation. API will respond with relevant state information.<br>
+	<b>Examples:</b><br>
+	http://baseURL.com/ND<br>
+	http://baseURL.com/PA<br>
+
+	<h2>Sample Response</h2>
+	<div id=json>
+	[ <br>
+		<div class=curly>- { </div>
+			<ul>
+				<li><b>state_name:</b> "North Dakota",</li>
+				<li><b>state_abbrev:</b> "ND",</li>
+				<li><b>capital:</b> "Bismarck",</li>
+				<li><b>population:</b> "756,927 (2015 est)",</li>
+				<li><b>population_rank:</b> 47,</li>
+				<li><b>joined_union:</b> "November 02, 1889",</li>
+				<li><b>nicknames:</b> "Peace Garden State, Roughrider State, Flickertail State"</li>
+			</ul>
+		<div class=curly> } </div>
+	]
+	</div>
+	<p>
+	created by <a href='http://www.neil-r.com' target="_blank">neil-r.com</a>
+	</p>
+</section>
+</body>
+</html>
